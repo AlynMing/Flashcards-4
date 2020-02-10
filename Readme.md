@@ -9,7 +9,7 @@ The Flashcards app is a simple flashcard app that asks the user a question and p
 
 ### App Walk-though
 
-<img src="https://gfycat.com/adventurousneglectedbaboon" width=200><br>
+<img src="https://raw.githubusercontent.com/CharlieHoangNguyen/Flashcards/master/Lab1.gif" width=200><br>
 
 ## Required
 - [X] Create New Project in Xcode
