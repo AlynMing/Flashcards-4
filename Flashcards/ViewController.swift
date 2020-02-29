@@ -9,18 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     //MARK: - IBOutlets
     @IBOutlet weak var backLabel: UILabel!
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var wrongAndCorrectLabel: UILabel!
     
+    @IBOutlet weak var rightAnswerButton: UIButton!
+    @IBOutlet weak var wrongAnswerButton1: UIButton!
+    @IBOutlet weak var wrongAnswerButton2: UIButton!
+    @IBOutlet weak var wrongAnswerButton3: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         wrongAndCorrectLabel.isHidden = true
     }
 
+    //MARK: - IBACtions
     @IBAction func didTapOnFlashCard(_ sender: Any) {
         showCorrectAnswer()
     }
@@ -62,4 +67,31 @@ extension ViewController {
     }
 }
 
+//MARK: - Segue Functions
+extension ViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let navigationController = segue.destination as! UINavigationController
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+        
+        if segue.identifier == "EditSegue" {
+            creationController.initialQuestion = frontLabel.text
+            creationController.initialAnswer = backLabel.text
+        }
+    }
+}
 
+//MARK: - Update Cards
+extension ViewController {
+    func updateFlashCard(question: String, answer: String, fakeAnswer1: String, fakeAnswer2: String, fakeAnswer3: String) {
+        frontLabel.text = question
+        backLabel.text = answer
+        
+        rightAnswerButton.setTitle(answer, for: .normal)
+        wrongAnswerButton1.setTitle(fakeAnswer1, for: .normal)
+        wrongAnswerButton2.setTitle(fakeAnswer2, for: .normal)
+        wrongAnswerButton3.setTitle(fakeAnswer3, for: .normal)
+    }
+}
