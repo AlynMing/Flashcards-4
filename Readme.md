@@ -6,20 +6,17 @@
 The Flashcards App can now save data! The next time you add a new flashcard, it will be saved on your phone until you chose to delete it. 
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+<img src="https://raw.githubusercontent.com/CharlieHoangNguyen/Flashcards/master/Lab3.gif" width=200><br>
 
 ## Required
 - [X] User can browse through multiple flashcards
 - [X] User can re-open the app and see previously created flashcards
-- [ ] Push code to GitHub
+- [X] Push code to GitHub
 ## Optional
-- [ ] User can delete a flashcard
-- [ ] User can edit existing flashcard
-- [ ] User can store multiple choice questions
+- [X] User can delete a flashcard
+- [X] User can edit existing flashcard
+- [X] User can store multiple choice questions
 📝 `NOTE` Paste this template at the top of your existing `README.md` file from the last lab.
 
 ## Lab 2
