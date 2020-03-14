@@ -37,10 +37,15 @@ class CreationViewController: UIViewController {
     }
     
     @IBAction func didTapOnDone(_ sender: Any) {
+        var isExisting = false
+        if initialQuestion == questionTextField.text {
+            isExisting = true
+        }
+        
         if (questionTextField.text != "") {
             if (answerTextField.text != "") {
                 if (fakeAnswer1.text != "" && fakeAnswer2.text != "" && fakeAnswer3.text != "") {
-                    flashcardsController.updateFlashCard(question: questionTextField.text!, answer: answerTextField.text!, fakeAnswer1: fakeAnswer1.text!, fakeAnswer2: fakeAnswer2.text!, fakeAnswer3: fakeAnswer3.text!);
+                    flashcardsController.updateFlashCard(question: questionTextField.text!, answer: answerTextField.text!, fakeAnswer1: fakeAnswer1.text!, fakeAnswer2: fakeAnswer2.text!, fakeAnswer3: fakeAnswer3.text!, isExisting: isExisting);
                     dismiss(animated: true, completion: nil)
                 }
             } else {
